@@ -1,0 +1,404 @@
+{
+    "errors": [
+        {
+            "regex": "expected ';' after return statement \\[Parse Issue\\]",
+            "message": "Remember that every statement should be ended with ';'",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "expected ';' after expression \\[Parse Issue\\]",
+            "message": "Remember to end the expression with ';'",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "expected ';' at end of declaration \\[Parse Issue\\]",
+            "message": "Remember that a declaration should be ended with ';'",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "non-void function '[\\_A-Za-z]+[\\_A-Za-z0-9]*' should return a value \\[Parse Issue\\]",
+            "message": "This function is not of type void, therefore you should add a return value",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "void function '[\\_A-Za-z]+[\\_A-Za-z0-9]*' should not return a value \\[Semantic Issue\\]",
+            "message": "This function is of type void, therefore you should not have a return value",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "use of undeclared identifier '[\\_A-Za-z]+[\\_A-Za-z0-9]*'; did you mean '[\\_A-Za-z]+[\\_A-Za-z0-9]*'? \\[Semantic Issue\\]",
+            "message": "You are making use of an unknown data type.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "use of undeclared identifier '[\\_A-Za-z]+[\\_A-Za-z0-9]*' \\[Sematic Issue\\]",
+            "message": "You have to declare the variable before using it",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "redefinition of '[\\_A-Za-z]+[\\_A-Za-z0-9]*' \\[Semantic Issue\\]",
+            "message": "You have already declared a variable/function with the same name and type. Rename this variable/function or change the existing variable value",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "redefinition of '[\\_A-Za-z]+[\\_A-Za-z0-9]*' with a different type: '[\\_A-Za-z]+[\\_A-Za-z0-9]*' vs '[\\_A-Za-z]+[\\_A-Za-z0-9]*' \\[Semantic Issue\\]",
+            "message": "You have already declared a variable with the same name but with different type. You should rename this variable",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "missing terminating ('\"'|') character \\[Lexical or Preprocessor Issue\\]",
+            "message": "Remember that for every opening quote there must be a terminating quote, or use an escape character.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "expected '}' \\[Parse Issue\\]",
+            "message": "Remember that for every '{' there must be a '}', or use an escape character.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "extraneous closing brace \\('}'\\) \\[Parse Issue\\]",
+            "message": "Remember that for every '}' there must be a '{' above, or use an escape character.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "'main' must return 'int' \\[Semantic Issue\\]",
+            "message": "The main function in a program should always return an integer.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "expected '\\]' \\[Parse Issue\\]",
+            "message": "Remember that for every '[' there must be a ']', or use an escape character.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "expected '\\)' \\[Parse Issue\\]",
+            "message": "Remember that for every '(' there must be a ')', or use an escape character.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "expected '>' \\[Parse Issue\\]",
+            "message": "Remember that for every '<' there must be a '>', or use an escape character.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "extraneous '\\)' before ';' \\[Parse Issue\\]",
+            "message": "Remember that for every ')' there must be a '(' before, or use an escape character.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "unused variable '[\\_A-Za-z]+[\\_A-Za-z0-9]*' \\[Unused Entity Issue\\]",
+            "message": "Try to avoid unused variables in your code as it is considered as a bad habit.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "use of undeclared identifier '[\\_A-Za-z]+[\\_A-Za-z0-9]*'(; did you mean '[\\_A-Za-z]+[\\_A-Za-z0-9]*'\\?)* \\[Semantic Issue\\]",
+            "message": "You have to declare the variable/function before using it.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "expected \"FILENAME\" or <FILENAME> \\[Lexical or Preprocessor Issue\\]",
+            "message": "Make sure that the filename that you want to include is between \" \" or < >.",
+            "phase": "[Preprocessing phase]"
+        },
+        {
+            "regex": "'[\\_A-Za-z0-9]+.[A-Za-z]+' file not found with <angled> include; use \"quotes\" instead \\[Lexical or Preprocessor Issue\\]",
+            "message": "Try \"FILENAME.h\". \"FILENAME.h\" is used for including local header files, whereas <FILENAME.h> is used for including system header files.",
+            "phase": "[Preprocessing phase]"
+        },
+        {
+            "regex": "cannot assign to variable '[\\_A-Za-z]+[\\_A-Za-z0-9]*' with const-qualified type 'const [\\_A-Za-z]+[\\_A-Za-z0-9]*' \\[Semantic Issue\\]",
+            "message": "You can only make an assignment to a constant variable once.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "format specifies type '[\\_A-Za-z]+[\\_A-Za-z0-9]*( (\\*)*)*' but the argument has type '[\\_A-Za-z]+[\\_A-Za-z0-9]*( (\\*)*)*' \\[Format String Issue\\]",
+            "message": "Make sure to use the correct format specifier and to use variables correctly (by using the address with '&' or by dereferencing with '*') to get the expected result.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "(candidate function not viable: requires [0-9]+ arguments, but [0-9]+ (was|were) provided \\[Semantic Issue\\])|(candidate function not viable: requires [a-zA-z]+ argument '[\\_a-zA-Z]+', but (no|[0-9]+) argument(s)* (was|were) provided \\[Semantic Issue\\])",
+            "message": "The function call contains too few or too many arguments. Check your function declaration/definition for the correct amount of arguments.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "no matching function for call to '[\\_A-Za-z]+[\\_A-Za-z0-9]*' \\[Semantic Issue\\]",
+            "message": "If this is built-in C function, look for the manual online or run 'man <FUNC_NAME>' in your terminal.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "unterminated /\\* comment \\[Lexical or Preprocessor Issue\\]",
+            "message": "Remember that after /* you have to close the comment block with */ .",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "cannot combine with previous '[\\_A-Za-z]+[\\_A-Za-z0-9]*' declaration specifier \\[Semantic Issue\\]",
+            "message": "The name you want to give is a reserved word within C. Use another name.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "expected unqualified-id \\[Parse Issue\\]",
+            "message": "Remember that a name can only start with a letter or underscore. Keep in mind that a name cannot be a reserved word",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "C\\+\\+ requires a type specifier for all declarations \\[Semantic Issue\\]",
+            "message": "Remember to add a type for each declaration.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "division by zero is undefined \\[Semantic Issue\\]",
+            "message": "You cannot divide by zero. Make sure that the denominator is other than zero.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "if statement has empty body \\[Semantic Issue\\]",
+            "message": "Are you sure you need an if statement with an empty body?",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "expected ':' \\[Parse Issue\\]",
+            "message": "You have to separate the true and false case with ':'.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "misleading indentation; statement is not part of the previous 'if' \\[Parse Issue\\]",
+            "message": "If you want to include this statement in the if statement, create a block by using { }.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "misleading indentation; statement is not part of the previous 'else' \\[Parse Issue\\]",
+            "message": "If you want to include this statement in the else statement, create a block by using { }.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "misleading indentation; statement is not part of the previous 'for' \\[Parse Issue\\]",
+            "message": "If you want to include this statement in the for loop, create a block by using { }.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "use of undeclared label '[\\_A-Za-z]+[\\_A-Za-z0-9]*' \\[Semantic Issue\\]",
+            "message": "You have to declare the label before you can use it.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "expected identifier \\[Parse Issue\\]",
+            "message": "You have to add a label to which you can jump.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "expected ';' in 'for' statement specifier \\[Parse Issue\\]",
+            "message": "The for loop should adhere to the structure 'for (<INITIALIZATION>; <CONDITION>; <UPDATE>)', therefore you always need two ';'.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "for loop has empty body \\[Semantic Issue\\]",
+            "message": "Are you sure you need a for loop with an empty body?",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "unexpected ';' before '\\)' \\[Parse Issue\\]",
+            "message": "The for loop should adhere to the structure 'for (<INITIALIZATION>; <CONDITION>; <UPDATE>)', therefore you always need two ';'.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "while loop has empty body \\[Semantic Issue\\]",
+            "message": "Keep in mind that you have to stop the while loop else you will have an infinite loop.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "misleading indentation; statement is not part of the previous 'while' \\[Parse Issue\\]",
+            "message": "If you want to include this statement in the while loop, create a block by using { }.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "expected '\\(' after 'while' \\[Parse Issue\\]",
+            "message": "You need to add a '(' after 'while' for your condition.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "'continue' statement not in loop statement \\[Semantic Issue\\]",
+            "message": "Remember that 'continue' jumps to the next iteration in a loop. Therefore 'continue' must be in a for/while/do-while loop.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "non-void function '[\\_A-Za-z]+[\\_A-Za-z0-9]*' should return a value \\[Semantic Issue\\]",
+            "message": "This function is not of type void, therefore you should add a return value",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "expected ';' after continue statement \\[Parse Issue\\]",
+            "message": "Remember that the continue statement should end with ';'.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "expected 'while' in do/while loop \\[Parse Issue\\]",
+            "message": "You need to add the while statement in the do-while loop.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "expected ';' after do/while statement \\[Parse Issue\\]",
+            "message": "You have to add a ';' at the end of your do-while loop. Note that this differs from the other loops.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "expected ':' after '[\\_A-Za-z]+[\\_A-Za-z0-9]*' \\[Parse Issue\\]",
+            "message": "You have to end a label with ':' to define it, for example 'case <VALUE>:' .",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "label at end of compound statement: expected statement \\[Parse Issue\\]",
+            "message": "In your last case there should always be a statement. If you want to do nothing simply add ';' or use a break.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "expected ';' after break statement \\[Parse Issue\\]",
+            "message": "Remember to end the break with ';'.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "duplicate case value '[0-9]+' \\[Semantic Issue\\]",
+            "message": "The case values have to be unique, so no duplicates are allowed.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "multiple default labels in one switch \\[Semantic Issue\\]",
+            "message": "There can at most be one default label in a switch.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "statement requires expression of integer type \\('[\\_A-Za-z\\[\\]0-9 ]*' invalid\\) \\[Semantic Issue\\]",
+            "message": "The switch expression must be an integer or character.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "enumeration value '[\\_A-Za-z]+[\\_A-Za-z0-9]*' not handled in switch \\[Semantic Issue\\]",
+            "message": "All the enumeration values should be covered within the switch. Implement all cases or use the default label to cover all values.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "non-void function does not return a value in all control paths \\[Semantic Issue\\]",
+            "message": "Make sure that in all possible cases a value is returned.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "all paths through this function will call itself \\[Semantic Issue\\]",
+            "message": "This function will lead to infinite recursion. Remember that a recursive function needs a recursive case and a base case.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "array initializer must be an initializer list or string literal \\[Semantic Issue\\]",
+            "message": "The initialization value should be an initializer list (e.g. {'h','e','y'}) or a string literal (e.g. \"hey\").",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "multi-character character constant \\[Lexical or Preprocessor Issue\\]",
+            "message": "Keep in mind that characters should be between ' ' and strings should be between \" \".",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "definition of variable with array type needs an explicit size or an initializer \\[Semantic Issue\\]",
+            "message": "If you want to initialize the array separately, you need to declare it with a explicit size.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "initializer-string for char array is too long \\[Semantic Issue\\]",
+            "message": "Keep in mind that your array should be big enough for the string and a null character.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "array type '[\\_A-Za-z\\[\\]0-9 ]*' is not assignable \\[Semantic Issue\\]",
+            "message": "An array is not assignable. If you want to change its content use memcpy()",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "'[\\_A-Za-z]+' [\\_A-Za-z ]+; destination buffer has size [0-9]+, but size argument is [0-9]+ \\[Semantic Issue\\]",
+            "message": "There is not enough space in 'destination' for the amount bytes from 'source' that you are trying to copy.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "excess elements in array initializer \\[Semantic Issue\\]",
+            "message": "You are initializing the array with too many elements. Reduce the amount of elements or increase your array size.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "variable-sized object may not be initialized \\[Semantic Issue\\]",
+            "message": "With a variable-sized object you have to split the declaration and initialization. You can initialize the object with memset().",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "array index [0-9]+ is past the end of the array \\(which contains [0-9]+ elements\\) \\[Semantic Issue\\]",
+            "message": "You are trying to access an element outside of the array. Also keep in mind that zero-based indexing has to be used.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "array index -[0-9]+ is before the beginning of the array \\[Semantic Issue\\]",
+            "message": "You cannot use negative indices.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "array comparison always evaluates to false \\[Semantic Issue\\]",
+            "message": "You cannot compare arrays with '=='. To compare arrays use memcmp() or strcmp()/strncmp() for strings",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "assigning to '[\\_A-Za-z \\*]+' from incompatible type '[\\_A-Za-z \\*]+'; take the address with & \\[Semantic Issue\\]",
+            "message": "When you want to point to an existing stack variable you need to use its address with '&'.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "variable '[\\_A-Za-z]+[\\_A-Za-z0-9]*' is uninitialized when used here \\[Semantic Issue\\]",
+            "message": "You have to initialize first, so assign a value to your variable or allocate memory for your pointer.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "cannot initialize a variable of type '[\\_A-Za-z \\*]+' with an lvalue of type '[\\_A-Za-z \\*]+' \\[Semantic Issue\\]",
+            "message": "Make sure that you use the address of the exisiting variable properly.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "cannot initialize a variable of type '[\\_A-Za-z \\*]+' with an rvalue of type '[\\_A-Za-z0-9\\(\\)\\[\\] \\*]+' \\[Semantic Issue\\]",
+            "message": "Check whether you need to use the exisiting address or not.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "excess elements in struct initializer \\[Semantic Issue\\]",
+            "message": "You are intializing a struct with too many elements. Check the fields of the struct for proper initialization.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "missing field '[\\_A-Za-z]+[\\_A-Za-z0-9]*' initializer \\[Semantic Issue\\]",
+            "message": "You are intializing a struct with too few elements. Check the fields of the struct for proper initialization.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "member reference type '[\\_A-Za-z0-9\\(\\)\\[\\] \\*]+' is not a pointer; did you mean to use '\\.'\\? \\[Semantic Issue\\]",
+            "message": "For heap objects you can use '->' to access fields. For stack objects you can only use '.' to access fields.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "typedef requires a name \\[Semantic Issue\\]",
+            "message": "When using typedef you must give your struct a new name.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "address of stack memory associated with local variable '[\\_A-Za-z]+[\\_A-Za-z0-9]*' returned \\[Semantic Issue\\]",
+            "message": "After the return the stack frame is cleaned up, so the stack variable that you pass on will be lost and no longer accessible.",
+            "phase": "[Compile phase]"
+        },
+        {
+            "regex": "macro name missing \\[Lexical or Preprocessor Issue\\]",
+            "message": "A macro always needs a name, but adding a value or arguments is optional.",
+            "phase": "[Preprocessing phase]"
+        },
+        {
+            "regex": "unterminated conditional directive \\[Lexical or Preprocessor Issue\\]",
+            "message": "Conditional directives like '#ifdef' should always be terminated with '#endif'.",
+            "phase": "[Preprocessing phase]"
+        },
+        {
+            "regex": "overflow in expression; result is (-)*[0-9]+ with type '[\\_A-Za-z]+[ \\_A-Za-z0-9]*'",
+            "message": "The result consists of more bits than can be stored. Only the least significant bits are stored, which changes the result.",
+            "phase": "[Compile phase]"
+        }
+    ]
+}
